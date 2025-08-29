@@ -104,16 +104,56 @@ int main() {
     printf("Pontos turiticos: %d\n", pontoturistico2);
     printf("Densidade Populacional: %.2fhab/km²\n", densidadepopulacional2);
     printf("PIB per capita: %.2f reais\n", pibpercapita2);
-    printf("Super Poder: %.2f\n", superpoder2;)
+    printf("Super Poder: %.2f\n", superpoder2);
 
     printf("\nComparação de Cartas:\n");
-    printf("População: Carta 1 venceu (%d)\n", populacao > populacao2);
-    printf("Área: Carta 1 venceu (%d)\n", area > area2);
-    printf("PIB: Carta 1 venceu (%d)\n", pib > pib2);
-    printf("Pontos Turísticos: Carta 1 venceu (%d)\n", pontoturistico > pontoturistico2);
-    printf("Densidade Populacional: Carta 1 venceu (%d)\n", densidadepopulacional < densidadepopulacional2);
-    printf("PIB per Capita: Carta 1 venceu (%d)\n", pibpercapita > pibpercapita2);
-    printf("Super Poder: Carta 1 venceu (%d)\n", superpoder1 > superpoder2);
+    printf("População: ");
+    if (populacao > pontoturistico2){
+        printf("Carta 1 venceu!\n");
+    }else{
+        printf("Carta 2 venceu\n");
+    }
+    
+    printf("Área:");
+    if(area > area2){
+        printf("Carta 1 venceu\n");
+    }else{
+        printf("Carta 2 venceu\n");
+    }
+
+    printf("PIB: ");
+    if(pib > pib2){
+        printf("Carta 1 venceu\n");
+    }else{
+        printf("Carta 2 venceu\n");
+    }
+
+    printf("Pontos Turísticos: ");
+    if(pontoturistico > pontoturistico2){
+        printf("Carta 1 venceu\n");
+    }else{
+        printf("Carta 2 venceu\n");
+    }
+
+    printf("Densidade Populacional: ");
+    if(densidadepopulacional < densidadepopulacional2){
+        printf("Carta 1 venceu\n");
+    }else{
+        printf("Carta 2 venceu\n");
+    }
+
+    printf("PIB per Capita ");
+    if(pibpercapita > pibpercapita2){
+        printf("Carta 1 venceu\n");
+    }else{
+        printf("Carta 2 venceu\n");
+    }
+    printf("Super Poder: ");
+    if(superpoder > superpoder2){
+        printf("Carta 1 venceu\n");
+    }else{
+        printf("Carta 2 venceu\n");
+    }
 
     return 0;
 }
