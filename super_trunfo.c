@@ -226,15 +226,15 @@ int main() {
         for(int i = 1; i <= 5; i++){
             if (i != atributo1){
                 switch (i){
-                case 1: printf("1 - Popoulação\n ", i);break;
+                case 1: printf("1 - Popoulação\n ");break;
                    
-                case 2: printf("2 - PIB\n", i);break;
+                case 2: printf("2 - PIB\n");break;
 
-                case 3: printf("Pontos Turísticos\n", i);break;
+                case 3: printf("3 - Pontos Turísticos\n");break;
 
-                case 4: printf("Densidade Populacional\n", i);break;
+                case 4: printf("4 - Densidade Populacional\n");break;
 
-                case 5: printf("Pib por capita\n", i );break;
+                case 5: printf("5 - Pib por capita\n");break;
 
                 default:
                     break;
