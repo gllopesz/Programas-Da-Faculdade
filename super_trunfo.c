@@ -24,11 +24,13 @@ int main() {
     float superpoder2;
     int opçao;
 
+    int atributo1 = -1, atributo2 = -1;
 
     printf("==== JOGO SUPER TRUNFO ====\n");
     printf("Adicione informações das cartas\n");
     printf("\n");
 
+    printf("==== CADASTRO DA CARTA 1 ====\n");
     printf("Uma letra para representar o Estado: ");
     scanf("%s", estado);
 
@@ -52,6 +54,7 @@ int main() {
 
     printf("\n");
 
+    printf("==== CADASTRO DA CARTA 2 ====\n");
     printf("Uma letra para representar o Estado: ");
     scanf("%s", estado2);
 
@@ -95,7 +98,6 @@ int main() {
     printf("Densidade Populacional: %.2fhab/km²\n", densidadepopulacional);
     printf("PIB per capita: %.2f reais\n", pibpercapita);
     printf("Suer Poder: %.2f\n", superpoder);
-
 
     printf("\n");
 
@@ -168,6 +170,7 @@ int main() {
     printf("2 - Atributo usado na comparação.\n");
     printf("3 - Os valores do atributo para cada carta.\n");
     printf("4 - Qual carta venceu. \n");
+    printf("5 - Comparação manual\n");
     printf("Selecione uma das opções:\n" );
     scanf("%d", &opçao);
 
@@ -200,11 +203,50 @@ int main() {
     case 4:
         if( superpoder > superpoder2){
             printf("%s venceu \n", nomecidade);
-        }else if (superpoder2 > superpoder) {
+        }else if (superpoder < superpoder2) {
             printf("%s venceu \n", nomecidade2);
         }else{
             printf("Empate!!");
+            break;
         }
+
+    case 5:
+        printf("==== Escolha  primeiro atributo de comparação ====\n");
+        printf("1 - População\n");
+        printf("2 - Pib\n");
+        printf("3 - Pontos Turísticos \n");
+        printf("4 - Densidade Populacional\n");
+        printf("5 - Pib/capita\n");
+        printf("Escolha: \n");
+        scanf("%d", &atributo1);
+
+        printf("\n");
+
+        printf("==== Escolha o segundo atributo de comparação ==== \n");
+        for(int i = 1; i <= 6; i++){
+            if (i != atributo1){
+                switch (i){
+                case 1: printf("1 - Popoulação\n ", i);break;
+                   
+                case 2: printf("2 - PIB\n", i);break;
+
+                case 3: printf("Pontos Turísticos\n", i);break;
+
+                case 4: printf("Densidade Populacional\n", i);break;
+
+                case 5: printf("Pib por capita\n", i );break;
+
+                default:
+                    break;
+                }
+            }
+        }
+        printf("Escolha\n");
+        scanf("%d", &atributo2);
+
+        break;
+
+
     default:
     printf("Opçao invalida, tente novamente com uma opção valida.");
         break;
