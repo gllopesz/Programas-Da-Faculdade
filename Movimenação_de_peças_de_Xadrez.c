@@ -13,11 +13,20 @@ int main(){
 
     printf("Digite quantas vezes deseja movimentar seu bispo: ");
     scanf("%d", &num);
+
     for(int bispo = 0;bispo <= num; bispo++){
-        printf("Cima, Direita");
+        printf("Cima, Direita, ");
     }
       printf("\n");
 
-      
-     return 0;
+    printf("Digite a quantidade de vezes que desejar mover a Rainha: ");
+    scanf("%d", &num);
+
+    for(int rainha = 0; rainha <= num; rainha++){
+        printf("Direita, ");
+    }
+    printf("\n");
+    
+    return 0;
 }
+
